@@ -17,17 +17,17 @@
         </div>
     </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('clothes') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('clothes_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('clothes') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('clothes_edit', { 'id': entity.id }) }}">
+                Edit
+            </a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
 {% endblock %}

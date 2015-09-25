@@ -32,5 +32,16 @@
       </options>
     </field>
     <field name="rating" type="float" column="rating" precision="10" scale="0" nullable="false"/>
+    <field name="featured" type="integer" column="featured" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="comment">0 or 1</option>
+      </options>
+    </field>
+    <field name="slug" type="string" column="slug" length="150" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
   </entity>
 </doctrine-mapping>

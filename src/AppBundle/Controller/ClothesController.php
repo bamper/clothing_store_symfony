@@ -27,7 +27,6 @@ class ClothesController extends Controller
      */
     public function indexAction()
     {
-
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('AppBundle:Clothes')->findAll();

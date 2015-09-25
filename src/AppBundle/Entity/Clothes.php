@@ -64,6 +64,20 @@ class Clothes
     /**
      * @var integer
      *
+     * @ORM\Column(name="featured", type="integer", nullable=false)
+     */
+    private $featured;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=150, nullable=false)
+     */
+    private $slug;
+
+    /**
+     * @var integer
+     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
@@ -238,6 +252,54 @@ class Clothes
     public function getRating()
     {
         return $this->rating;
+    }
+
+    /**
+     * Set featured
+     *
+     * @param integer $featured
+     *
+     * @return Clothes
+     */
+    public function setFeatured($featured)
+    {
+        $this->featured = $featured;
+
+        return $this;
+    }
+
+    /**
+     * Get featured
+     *
+     * @return integer
+     */
+    public function getFeatured()
+    {
+        return $this->featured;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Clothes
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**

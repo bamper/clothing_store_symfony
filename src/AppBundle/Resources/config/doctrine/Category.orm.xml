@@ -9,7 +9,7 @@
         <option name="fixed"/>
       </options>
     </field>
-    <field name="parentcategory" type="integer" column="parentCategory" nullable="false">
+    <field name="parentcategory" type="integer" column="parentCategory" nullable="true">
       <options>
         <option name="unsigned"/>
       </options>
