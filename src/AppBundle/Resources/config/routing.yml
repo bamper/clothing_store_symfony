@@ -1,0 +1,4 @@
+app_clothes:
+    resource: "@AppBundle/Resources/config/routing/clothes.yml"
+    prefix:   /clothes
+

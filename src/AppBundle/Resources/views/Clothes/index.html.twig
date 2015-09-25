@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+
+    <div class="row">
+          <div class="col-md-3">
+                <p class="lead">Filters</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Category 1</a>
+                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" class="list-group-item">Category 3</a>
+                </div>
+              <ul>
+                  <li>
+                      <a href="{{ path('clothes_new') }}">
+                          Create a new entry
+                      </a>
+                  </li>
+              </ul>
+            </div>
+        <div class="col-md-9">
+        {%  for item in entities %}
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/320x150" alt="">
+                    <div class="caption">
+                        <h4 class="pull-right">&euro;{{  item.price|number_format(2, '.', ',') }}</h4>
+                        <h4><a href="{{ path('clothes_show', { 'id': item.id }) }}">{{  item.name }}</a>
+                        </h4>
+                        <p>{{  item.details }}</p>
+                    </div>
+                    <div class="ratings">
+                        <p>
+                            {%  for i in range(0, item.rating) %}
+                                <span class="glyphicon glyphicon-star"></span>
+                            {%  endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {%  endfor %}
+        </div>
+    </div>
+
+    {% endblock %}

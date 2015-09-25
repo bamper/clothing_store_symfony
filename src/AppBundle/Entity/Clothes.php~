@@ -1,0 +1,75 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Clothes
+ *
+ * @ORM\Table(name="clothes")
+ * @ORM\Entity
+ */
+class Clothes
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=250, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="categoryID", type="integer", nullable=false)
+     */
+    private $categoryid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="details", type="text", length=65535, nullable=false)
+     */
+    private $details;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gender", type="integer", nullable=false)
+     */
+    private $gender;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $price;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="brandID", type="integer", nullable=false)
+     */
+    private $brandid;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="rating", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $rating;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

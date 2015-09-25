@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Clothes</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="item-image" />
+            </div>
+            <div class="col-md-6">
+                <h2>{{  entity.name }} - {{  entity.price }}</h2>
+                <h3>Rating: {{ entity.rating }}</h3>
+                <hr>
+                <p>{{ entity.details }}</p>
+            </div>
+        </div>
+    </div>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('clothes') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('clothes_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

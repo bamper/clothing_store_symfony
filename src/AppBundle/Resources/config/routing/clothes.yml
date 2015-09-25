@@ -1,0 +1,30 @@
+clothes:
+    path:     /
+    defaults: { _controller: "AppBundle:Clothes:index" }
+
+clothes_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Clothes:show" }
+
+clothes_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Clothes:new" }
+
+clothes_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Clothes:create" }
+    methods:  POST
+
+clothes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Clothes:edit" }
+
+clothes_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Clothes:update" }
+    methods:  [POST, PUT]
+
+clothes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Clothes:delete" }
+    methods:  [POST, DELETE]
