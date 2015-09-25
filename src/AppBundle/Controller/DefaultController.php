@@ -25,7 +25,7 @@ class DefaultController extends Controller
 
         $entities = $em->getRepository('AppBundle:Clothes')->findAll();
 
-        return $this->render('default/index.html.twig', array('items'=>$entities));
+        return $this->render('default/index.html.twig', array('entities'=>$entities));
     }
 
     /**
@@ -70,6 +70,7 @@ class DefaultController extends Controller
                 ->getRepository('AppBundle:Clothes')
                 ->find($string);
         }
+
     }
 
 

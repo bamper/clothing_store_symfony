@@ -1,16 +1,25 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
+
+
+
     <h1>Clothes</h1>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img class="item-image" />
+                <img class="item-image"  />
             </div>
             <div class="col-md-6">
-                <h2>{{  entity.name }} - {{  entity.price }}</h2>
-                <h3>Rating: {{ entity.rating }}</h3>
+                <h2>{{  entity.name }} </h2>
+                <h2>&euro;{{ entity.price|number_format(2, '.', ',')  }}</h2>
+                <h3>Rating:
+                    {%  for i in range(0, entity.rating) %}
+                          <span class="glyphicon glyphicon-star"></span>
+                    {%  endfor %}
+
+                    </h3>
                 <hr>
                 <p>{{ entity.details }}</p>
             </div>

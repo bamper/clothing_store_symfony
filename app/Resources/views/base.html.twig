@@ -6,6 +6,7 @@
         {% block stylesheets %}
             <link href="{{ asset('bundles/css/bootstrap.min.css') }}" rel="stylesheet" />
             <link href="{{ asset('bundles/css/shop-homepage.css') }}" rel="stylesheet">
+
             <link href="{{ asset('bundles/css/main.css') }}" rel="stylesheet" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -39,10 +40,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/about">About</a>
+                        <a href="{{ path('about')}}">About</a>
                     </li>
                     <li>
-                        <a href="/clothes">Shop</a>
+                        <a href="{{ path('clothes')}}">Shop</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
