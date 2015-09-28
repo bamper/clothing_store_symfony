@@ -64,6 +64,20 @@ class Clothes
     /**
      * @var integer
      *
+     * @ORM\Column(name="featured", type="integer", nullable=false)
+     */
+    private $featured;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=150, nullable=false)
+     */
+    private $slug;
+
+    /**
+     * @var integer
+     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
